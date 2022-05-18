@@ -7,6 +7,7 @@ import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -36,7 +37,10 @@ public class GreetingController
         return greet.findById(id);
     }
 
-
+    @GetMapping("/all")
+    public List<Greeting> getAll(){
+        return greet.getAll();
+    }
 
 
 

@@ -5,6 +5,7 @@ import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import repository.GreetingRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public class GreetingService  implements IGreetingService
@@ -27,4 +28,10 @@ public class GreetingService  implements IGreetingService
 
         return greetingRepository.findById(id);
     }
+
+    @Override
+    public List<Greeting> getAll() {
+        return greetingRepository.findAll();
+    }
+
 }
