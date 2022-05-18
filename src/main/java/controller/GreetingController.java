@@ -47,6 +47,11 @@ public class GreetingController
         return greet.editGreetingById(id, name);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteByID(@PathVariable("id") long id) {
+        greet.delete(id);
+    }
+
 
 
 }

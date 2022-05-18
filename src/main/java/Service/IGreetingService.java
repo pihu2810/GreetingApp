@@ -13,4 +13,5 @@ public interface IGreetingService {
 
     Optional<Greeting> editGreetingById(long id, String name);
 
+    void delete(long id);
 }
