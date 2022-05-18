@@ -14,6 +14,8 @@ public class GreetingController
     //private final AtomicLong counter = new AtomicLong();
 
 
+    @Autowired
+    private IGreetingService greet;
 
     @RequestMapping(value= {"","/","/home"})
     public String sayHello() {
