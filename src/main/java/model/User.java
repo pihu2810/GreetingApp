@@ -1,5 +1,7 @@
 package model;
 
+import javax.persistence.Id;
+
 public class User
 {
     public String firstName;
